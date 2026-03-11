@@ -27,7 +27,7 @@ To update the skill: `cd ~/Developer/planning-with-notion && git pull`
 | Property | Type | Notes |
 |---|---|---|
 | Name | Title | Task name |
-| Status | Select | Backlog, To Do, In Progress, QA, Completed |
+| Status | Select | Backlog, To Do, Ready, In Progress, QA, Completed |
 | Priority | Select | Low 🟢, Medium 🟠, High 🔴, Critical 🚨 |
 | Assignee | Select | Mitch, Beebee, Artoo, Kaytoo, Threepio |
 | Created time | Auto | Set by Notion |
@@ -40,7 +40,8 @@ Progress updates go in **comments** (not page body edits).
 | Status | Meaning | Action |
 |---|---|---|
 | Backlog | Mitch's working area | Ignore |
-| To Do | Awaiting approval | Don't start until moved to In Progress |
+| To Do | Awaiting approval | Don't start until moved to In Progress or Ready |
+| Ready | Approved — free to start | Pick up, move to In Progress, and begin work |
 | In Progress | Active work | Pick up and progress |
 | QA | Droid thinks it's done | Reassign to Mitch, alert him |
 | Completed | Mitch accepted | Nothing to do |
@@ -48,10 +49,11 @@ Progress updates go in **comments** (not page body edits).
 ## Rules
 
 ### On Heartbeat
-1. Query the board for tasks assigned to you that are `In Progress` or `To Do`
+1. Query the board for tasks assigned to you that are `In Progress`, `Ready`, or `To Do`
 2. `In Progress` → continue working on it
-3. `To Do` → note it exists, but don't start (wait for Mitch to approve to In Progress)
-4. If Mitch moved a task to `In Progress` since last check → pick it up
+3. `Ready` → pick it up, move to `In Progress`, and start work
+4. `To Do` → note it exists, but don't start (wait for Mitch to move to Ready or In Progress)
+5. If Mitch moved a task to `Ready` or `In Progress` since last check → pick it up
 
 ### Creating Tasks
 - **You spot something that needs doing** → create as `To Do`, assign to yourself, wait for approval
