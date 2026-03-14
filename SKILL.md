@@ -29,7 +29,7 @@ To update the skill: `cd ~/Developer/planning-with-notion && git pull`
 | Name | Title | Task name |
 | Status | Select | Backlog, To Do, Ready, In Progress, QA, Completed |
 | Priority | Select | Low 🟢, Medium 🟠, High 🔴, Critical 🚨 |
-| Assignee | Select | Mitch, Beebee, Artoo, Kaytoo, Threepio |
+| Assignee | Multi-select | Mitch, Beebee, Artoo, Kaytoo, Threepio |
 | Created time | Auto | Set by Notion |
 
 Task details (goal, plan, acceptance criteria) go in the page body as markdown.
